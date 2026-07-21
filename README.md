@@ -90,6 +90,6 @@ npx webpack
 
 ## Acknowledgements
 
-This project was completed as part of **The Odin Project** Foundations course.
+This project was completed as part of **The Odin Project** JavaScript course in Full Stack JavaScript Path.
 
 https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page
