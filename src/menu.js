@@ -89,17 +89,17 @@ const menu = function() {
 
     const title = document.createElement("h1");
     title.textContent = "Our Menu";
-    title.classList.add("menu-title");
+    title.classList.add("page-title");
 
     const subtitle = document.createElement("h2");
     subtitle.textContent = "Crafted with Passion, Served with Care";
-    subtitle.classList.add("menu-subtitle");
+    subtitle.classList.add("section-heading");
 
     contentDiv.append(title, subtitle);
 
     for(const category of categories) {
         const categoryDiv = document.createElement("div");
-        categoryDiv.classList.add("category-div");
+        categoryDiv.classList.add("menu-category");
 
         const categoryHeading = document.createElement("h3");
         categoryHeading.textContent = category;
