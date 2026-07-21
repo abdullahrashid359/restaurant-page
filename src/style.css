@@ -1,0 +1,291 @@
+:root {
+    /* Fonts */
+    --heading-font: "Cinzel", serif;
+    --body-font: "Manrope", sans-serif;
+    
+    /* Backgrounds */
+    --color-bg: #f8f5f0;
+    --color-surface: #fffdf9;
+    --color-surface-alt: #f1ece4;
+
+    /* Text */
+    --color-text: #2d2a26;
+    --color-text-light: #5e5a55;
+
+    /* Accent */
+    --color-primary: #8b5e3c;
+    --color-primary-dark: #6d472c;
+    --color-accent: #d4af37;
+
+    /* Borders */
+    --color-border: #d8cfc3;
+
+    /* Shadows */
+    --shadow-soft: 0 6px 18px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 10px 24px rgba(0, 0, 0, 0.15);
+
+    /* Layout */
+    --max-width: 1200px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    font-family: var(--body-font);
+}
+
+.page-title,
+.section-heading,
+.category-heading {
+    font-family: var(--heading-font);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    font-family: var(--body-font);
+}
+
+#content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+header {
+    box-shadow: var(--shadow-soft);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(255,253,249,.95);
+    backdrop-filter: blur(8px);
+}
+
+nav {
+    max-width: var(--max-width);
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    padding: 1.25rem;
+}
+
+nav button {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    color: var(--color-text);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    padding: 0.5rem 1rem;
+
+    border-bottom: 2px solid transparent;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.2s ease;
+}
+
+nav button:hover {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+nav button.active {
+    background-color: var(--color-primary);
+    border-radius:999px;
+    color: white;
+}
+
+.page-title {
+    font-size: 4.5rem;
+    letter-spacing: 4px;
+    text-align: center;
+    margin-bottom: 1rem;
+    
+    color: var(--color-primary);
+}
+
+.home-heading {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-accent);
+    margin-top: 0;
+    letter-spacing:2px;
+}
+
+.home-text {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.9);
+    max-width: 700px;
+}
+
+.home-hero {
+    min-height: 85vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 4rem 2rem;
+
+    border-radius: 18px;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+        url("./images/homepage/interior.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    box-shadow: var(--shadow-soft);
+}
+
+.home-hero .page-title {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.menu-subtitle {
+    text-align: center;
+}
+
+.category-section {
+    margin-top: 4rem;
+}
+
+.category-heading {
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+
+.menu-category {
+    margin-top:4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 2rem;
+}
+
+.dish-card {
+    background-color: var(--color-surface);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.dish-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.dish-image {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.dish-card:hover .dish-image {
+    transform: scale(1.05);
+}
+
+
+.dish-name {
+    margin: 1rem 1.25rem .5rem;
+
+    color: var(--color-primary);
+
+    font-size: 1.35rem;
+}
+
+.dish-description {
+    margin: 0 1.25rem;
+
+    color: var(--color-text-light);
+
+    font-size: .95rem;
+}
+
+.dish-price {
+    margin: 1rem 1.25rem;
+
+    color: var(--color-primary);
+
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.rest-dining-img {
+    display: block;
+
+    width: 100%;
+    max-width: 900px;
+
+    height: 450px;
+
+    object-fit: cover;
+    object-position: center 40%;
+
+    margin: 0 auto 3rem;
+
+    border-radius: 16px;
+
+    box-shadow: var(--shadow-soft);
+}
+
+.about-heading {
+    max-width: 800px;
+    margin: 3rem auto 1rem;
+    color: var(--color-primary);
+}
+
+.about-text {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    line-height: 1.8;
+}
+
+.opening-hours-list {
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    line-height: 2;
+
+    list-style: none;
+    padding: 0;
+}
+
+.opening-hours-list li {
+    margin-bottom: 0.75rem;
+}

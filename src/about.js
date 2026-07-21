@@ -14,23 +14,23 @@ const about = function() {
 
     const storyHeading = document.createElement("h2");
     storyHeading.textContent = "Our Story";
-    storyHeading.classList.add("section-heading");
+    storyHeading.classList.add("about-heading");
 
     const storyText = document.createElement("p");
     storyText.textContent = "Founded with a passion for exceptional dining, Lumière was created to bring together timeless recipes, fresh ingredients, and modern elegance. Every dish is carefully prepared to offer not just a meal, but an experience where family, friends, and unforgettable memories come together around the table.";
-    storyText.classList.add("section-text");
+    storyText.classList.add("about-text");
 
     const philosophyHeading = document.createElement("h2");
     philosophyHeading.textContent = "Our Philosophy";
-    philosophyHeading.classList.add("section-heading");
+    philosophyHeading.classList.add("about-heading");
 
     const philosophyText = document.createElement("p");
     philosophyText.textContent = "At Lumière, we believe that great food begins with quality ingredients, thoughtful preparation, and genuine hospitality. Our goal is to create a warm and welcoming atmosphere where every guest feels at home while enjoying cuisine crafted with care and creativity.";
-    philosophyText.classList.add("section-text");
+    philosophyText.classList.add("about-text");
 
     const openingHoursHeading = document.createElement("h2");
     openingHoursHeading.textContent = "Opening Hours";
-    openingHoursHeading.classList.add("section-heading");
+    openingHoursHeading.classList.add("about-heading");
 
     const openingHoursList = document.createElement("ul");
     openingHoursList.classList.add("opening-hours-list");
@@ -48,11 +48,11 @@ const about = function() {
 
     const locationHeading = document.createElement("h2");
     locationHeading.textContent = "Our Location";
-    locationHeading.classList.add("section-heading");
+    locationHeading.classList.add("about-heading");
 
     const locationText = document.createElement("p");
     locationText.textContent = "Visit us at 12 MM Alam Road, Gulberg III, Lahore, where elegant ambiance, attentive service, and unforgettable flavors await. Whether it's a casual dinner or a special celebration, we're always delighted to welcome you.";
-    locationText.classList.add("section-text");
+    locationText.classList.add("about-text");
 
     contentDiv.append(title, image, storyHeading, storyText, philosophyHeading, philosophyText, openingHoursHeading, openingHoursList, locationHeading, locationText);
 }

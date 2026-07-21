@@ -33,7 +33,7 @@ const dishes = [
     },
     {
         name: "Truffle Pasta",
-        description: "Homemade fettuccine tossed in a rich truffle cream sauce with parmesan.",
+        description: "Fresh fettuccine tossed in a creamy truffle parmesan sauce, finished with herbs and shaved parmesan.",
         price: "3,950",
         img: pastaImg,
         category: "Main Courses",
@@ -75,7 +75,7 @@ const dishes = [
     },
     {
         name: "Sparkling Water",
-        description: "Premium chilled sparkling mineral water.",
+        description: "Premium sparkling mineral water served chilled with a refreshing crisp finish.",
         price: "550",
         img: waterImg,
         category: "Beverages",
@@ -94,10 +94,14 @@ const menu = function() {
     const subtitle = document.createElement("h2");
     subtitle.textContent = "Crafted with Passion, Served with Care";
     subtitle.classList.add("section-heading");
+    subtitle.classList.add("menu-subtitle");
 
     contentDiv.append(title, subtitle);
 
     for(const category of categories) {
+        const categorySection = document.createElement("div");
+        categorySection.classList.add("category-section");
+
         const categoryDiv = document.createElement("div");
         categoryDiv.classList.add("menu-category");
 
@@ -105,7 +109,7 @@ const menu = function() {
         categoryHeading.textContent = category;
         categoryHeading.classList.add("category-heading");
 
-        categoryDiv.append(categoryHeading);
+        categorySection.append(categoryHeading);
 
         const categoryDishes = dishes.filter((dish) => dish.category === category);
 
@@ -127,14 +131,15 @@ const menu = function() {
             dishDescription.classList.add("dish-description");
 
             const dishPrice = document.createElement("p");
-            dishPrice.textContent = dish.price;
+            dishPrice.textContent = `Rs. ${dish.price}`;
             dishPrice.classList.add("dish-price");
 
             dishCard.append(dishImage, dishName, dishDescription, dishPrice);
             categoryDiv.append(dishCard);
         }
 
-        contentDiv.append(categoryDiv);
+        categorySection.append(categoryDiv);
+        contentDiv.append(categorySection);
     }
 }
 
