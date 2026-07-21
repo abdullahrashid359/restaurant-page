@@ -4,7 +4,7 @@ A modern restaurant website built as part of **The Odin Project** Full Stack Jav
 
 ## Live Demo
 
-**Live:** [*Add your deployed link here*](https://abdullahrashid359.github.io/restaurant-page/)
+**Live:** (https://abdullahrashid359.github.io/restaurant-page/)
 
 ## Screenshots
 
